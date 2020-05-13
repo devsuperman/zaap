@@ -21,7 +21,7 @@
       </div>
       <div class="row center">
         <input placeholder="Número de telefone com DDD" type="tel" id='txtTel'>
-        <a href="wa.me" id="download-button" class="btn-large waves-effect waves-light orange" id='link'>Enviar</a>
+        <a href="#" class="btn-large waves-effect waves-light orange" id='link'>Enviar</a>
       </div>
 
     </div>
@@ -33,10 +33,11 @@
   <script>
     var $tel = document.getElementById('txtTel');
     var $link = document.getElementById('link');
-    const url = 'wa.me/';
+    const url = 'https://wa.me/55';
 
-    document.addEventListener('blur', () => {      
-      $link.setAttribute('href', url + $tel.nodeValue);
+    $tel.addEventListener('keypress', () => {      
+      $link.setAttribute('href', url + $tel.value);
+      console.log(url + $tel.value);
     });
 
   </script>
