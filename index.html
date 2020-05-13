@@ -19,10 +19,21 @@
       <div class="row center">
         <h5 class="header col s12 light">Mensagem no whatsapp sem salvar o contato</h5>
       </div>
-      <div class="row center">
-        <input placeholder="Número de telefone com DDD" type="tel" id='txtTel'>
-        <a href="#" class="btn-large waves-effect waves-light orange" id='link'>Enviar</a>
-      </div>
+      
+      <form method="get" action="#">
+        <div class="row center">
+          <div class="input-field col s2">
+            <input placeholder="DDD" id="ddd" type="number" value='69' required>
+          </div>
+          <div class="input-field col s10">
+            <input placeholder="Número de telefone" id="txtTel" type="number"required>          
+          </div>
+        </div>
+        
+        <div class="row center">
+          <button type='submit' class="btn-large waves-effect waves-light orange">Enviar</button>
+        </div>
+      </form>
 
     </div>
   </div>
@@ -30,18 +41,7 @@
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="js/materialize.js"></script>
 
-  <script>
-    var $tel = document.getElementById('txtTel');
-    var $link = document.getElementById('link');
-    const url = 'https://wa.me/55';
-
-    $tel.addEventListener('keyup', () => {      
-      $link.setAttribute('href', url + $tel.value);
-      console.log(url + $tel.value);
-    });
-
-  </script>
-
+  <script src='js/site.js' asp-append-version='true'></script>
 
   </body>
 </html>
