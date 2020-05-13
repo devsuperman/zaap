@@ -20,8 +20,8 @@
         <h5 class="header col s12 light">Mensagem no whatsapp sem salvar o contato</h5>
       </div>
       <div class="row center">
-        <input placeholder="Número de telefone com DDD)">
-        <a href="http://materializecss.com/getting-started.html" id="download-button" class="btn-large waves-effect waves-light orange">Enviar</a>
+        <input placeholder="Número de telefone com DDD" type="tel" id='txtTel'>
+        <a href="wa.me" id="download-button" class="btn-large waves-effect waves-light orange" id='link'>Enviar</a>
       </div>
 
     </div>
@@ -29,6 +29,18 @@
 
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="js/materialize.js"></script>
+
+  <script>
+    var $tel = document.getElementById('txtTel');
+    var $link = document.getElementById('link');
+    const url = 'wa.me/';
+
+    document.addEventListener('blur', () => {      
+      $link.setAttribute('href', url + $tel.nodeValue);
+    });
+
+  </script>
+
 
   </body>
 </html>
