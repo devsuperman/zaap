@@ -35,7 +35,7 @@
     var $link = document.getElementById('link');
     const url = 'https://wa.me/55';
 
-    $tel.addEventListener('keydown', () => {      
+    $tel.addEventListener('keyup', () => {      
       $link.setAttribute('href', url + $tel.value);
       console.log(url + $tel.value);
     });
